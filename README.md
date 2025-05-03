@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <!-- Head content (meta, title, Tailwind config) -->
