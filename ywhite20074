@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frank J. Williams Entertainment Group, LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#D10000',
+                        'brand-gold': '#D4AF37',
+                        'brand-black': '#121212',
+                    }
+                },
+                fontFamily: {
+                    'sans': ['Montserrat', 'sans-serif'],
+                    'serif': ['Georgia', 'serif'],
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #F2D675 50%, #D4AF37 100%);
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        
+        .service-card:hover {
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-brand-black bg-opacity-90 backdrop-blur-sm border-b border-brand-gold/30">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <span class="text-brand-gold font-bold text-2xl">FJW</span>
+                    <span class="ml-2 text-white text-lg">Entertainment Group</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-brand-gold transition">Home</a>
+                    <a href="#services" class="nav-link text-white hover:text-brand-gold transition">Services</a>
+                    <a href="#about" class="nav-link text-white hover:text-brand-gold transition">About</a>
+                    <a href="#portfolio" class="nav-link text-white hover:text-brand-gold transition">Portfolio</a>
+                    <a href="#contact" class="nav-link text-white hover:text-brand-gold transition">Contact</a>
+                </div>
+                
+                <!-- Mobile Navigation Toggle -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#home" class="text-white hover:text-brand-gold transition py-2">Home</a>
+                    <a href="#services" class="text-white hover:text-brand-gold transition py-2">Services</a>
+                    <a href="#about" class="text-white hover:text-brand-gold transition py-2">About</a>
+                    <a href="#portfolio" class="text-white hover:text-brand-gold transition py-2">Portfolio</a>
+                    <a href="#contact" class="text-white hover:text-brand-gold transition py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/90 to-brand-black"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.15),transparent_70%)]"></div>
+            
+            <!-- Abstract Background Elements -->
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-brand-red opacity-10 blur-3xl"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-brand-gold opacity-10 blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+                <span class="text-brand-gold">Frank J. Williams</span>
+                <span class="block mt-2">Entertainment Group</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-300">
+                Elevating entertainment through exceptional production, management, and digital media services
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#services" class="gold-gradient text-brand-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition transform hover:scale-105">
+                    Our Services
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-8 rounded-full hover:bg-brand-gold/10 transition transform hover:scale-105">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
+            <a href="#services" class="text-brand-gold">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-brand-black to-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-brand-gold">Services</span></h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    We offer comprehensive entertainment and media solutions tailored to your unique vision and goals.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Production -->
+                <div class="service-card bg-brand-black/50 border border-brand-gold/20 rounded-xl p-6 transition duration-300 hover:translate-y-[-5px]">
+                    <div class="service-icon w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6 mx-auto transition duration-300">
+                        <i class="fas fa-calendar-star text-brand-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-brand-gold">Event Production</h3>
+                    <p class="text-gray-300 text-center">
+                        From concept to execution, we deliver unforgettable events with meticulous planning, creative direction, and flawless technical production.
+                    </p>
+                </div>
+                
+                <!-- Artist Management -->
+                <div class="service-card bg-brand-black/50 border border-brand-gold/20 rounded-xl p-6 transition duration-300 hover:translate-y-[-5px]">
+                    <div class="service-icon w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6 mx-auto transition duration-300">
+                        <i class="fas fa-user-tie text-brand-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-brand-gold">Artist Management</h3>
+                    <p class="text-gray-300 text-center">
+                        We nurture talent and build careers through strategic guidance, booking, promotion, and comprehensive career development.
+                    </p>
+                </div>
+                
+                <!-- Film Production -->
+                <div class="service-card bg-brand-black/50 border border-brand-gold/20 rounded-xl p-6 transition duration-300 hover:translate-y-[-5px]">
+                    <div class="service-icon w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6 mx-auto transition duration-300">
+                        <i class="fas fa-film text-brand-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-brand-gold">Film Production</h3>
+                    <p class="text-gray-300 text-center">
+                        Our creative team brings stories to life through professional cinematography, direction, and post-production services.
+                    </p>
+                </div>
+                
+                <!-- Digital Media Services -->
+                <div class="service-card bg-brand-black/50 border border-brand-gold/20 rounded-xl p-6 transition duration-300 hover:translate-y-[-5px]">
+                    <div class="service-icon w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6 mx-auto transition duration-300">
+                        <i class="fas fa-hashtag text-brand-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-brand-gold">Digital Media Services</h3>
+                    <p class="text-gray-300 text-center">
+                        Enhance your digital presence with our social media management, content creation, and digital marketing strategies.
+                    </p>
+                </div>
+                
+                <!-- Website Development -->
+                <div class="service-card bg-brand-black/50 border border-brand-gold/20 rounded-xl p-6 transition duration-300 hover:translate-y-[-5px]">
+                    <div class="service-icon w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6 mx-auto transition duration-300">
+                        <i class="fas fa-laptop-code text-brand-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-brand-gold">Website Development</h3>
+                    <p class="text-gray-300 text-center">
+                        Custom website solutions designed to showcase your brand with responsive, user-friendly, and visually stunning interfaces.
+                    </p>
+                </div>
+                
+                <!-- Videography -->
+                <div class="service-card bg-brand-black/50 border border-brand-gold/20 rounded-xl p-6 transition duration-300 hover:translate-y-[-5px]">
+                    <div class="service-icon w-16 h-16 rounded-full gold-gradient flex items-center justify-center mb-6 mx-auto transition duration-300">
+                        <i class="fas fa-video text-brand-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-center text-brand-gold">Videography</h3>
+                    <p class="text-gray-300 text-center">
+                        Capture your special moments or create promotional content with our professional videography and editing services.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block gold-gradient text-brand-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition transform hover:scale-105">
+                    Request a Service
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-brand-black">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-gold"></div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-gold"></div>
+                        
+                        <!-- SVG placeholder for company image -->
+                        <div class="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg overflow-hidden relative h-[400px]">
+                            <svg class="absolute inset-0 w-full h-full text-gray-700 opacity-20" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <path d="M0,0 L100,0 L100,100 L0,100 Z" fill="currentColor"></path>
+                                <path d="M0,0 L100,100 M100,0 L0,100" stroke="currentColor" stroke-width="1" fill="none"></path>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-brand-gold text-5xl font-bold mb-2">FJW</div>
+                                    <div class="text-white text-xl">Entertainment Group</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About <span class="text-brand-gold">Frank J. Williams</span> Entertainment Group</h2>
+                    <div class="w-24 h-1 bg-brand-red mb-6"></div>
+                    
+                    <p class="text-gray-300 mb-4">
+                        Founded with a passion for excellence in entertainment, Frank J. Williams Entertainment Group has established itself as a premier provider of comprehensive entertainment and media services.
+                    </p>
+                    
+                    <p class="text-gray-300 mb-4">
+                        Our team of industry professionals brings decades of combined experience across event production, artist management, film production, and digital media services. We pride ourselves on our attention to detail, creative vision, and commitment to exceeding client expectations.
+                    </p>
+                    
+                    <p class="text-gray-300 mb-6">
+                        Whether you're looking to produce a memorable event, develop your artistic career, create compelling visual content, or enhance your digital presence, we have the expertise and resources to help you achieve your goals.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-3">
+                                <i class="fas fa-star text-brand-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Excellence</h4>
+                                <p class="text-sm text-gray-400">In every project</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-3">
+                                <i class="fas fa-lightbulb text-brand-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Innovation</h4>
+                                <p class="text-sm text-gray-400">Creative solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-3">
+                                <i class="fas fa-handshake text-brand-black"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Integrity</h4>
+                                <p class="text-sm text-gray-400">Trust & reliability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-b from-brand-black to-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-brand-gold">Portfolio</span></h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    Explore our diverse collection of projects showcasing our expertise across various entertainment and media domains.
+                </p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="portfolio-filter active px-6 py-2 rounded-full border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black transition" data-filter="all">All</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full border border-gray-600 text-gray-300 hover:border-brand-gold hover:text-brand-gold transition" data-filter="events">Events</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full border border-gray-600 text-gray-300 hover:border-brand-gold hover:text-brand-gold transition" data-filter="film">Film</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full border border-gray-600 text-gray-300 hover:border-brand-gold hover:text-brand-gold transition" data-filter="digital">Digital</button>
+                <button class="portfolio-filter px-6 py-2 rounded-full border border-gray-600 text-gray-300 hover:border-brand-gold hover:text-brand-gold transition" data-filter="web">Web</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item group events" data-category="events">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 aspect-video">
+                        <!-- SVG placeholder for portfolio image -->
+                        <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <rect width="100" height="100" fill="currentColor"></rect>
+                            <circle cx="50" cy="40" r="20" fill="#D10000" opacity="0.5"></circle>
+                            <rect x="20" y="60" width="60" height="20" fill="#D4AF37" opacity="0.5"></rect>
+                        </svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-brand-black/80 transition-opacity duration-300">
+                            <button class="view-project px-6 py-2 rounded-full gold-gradient text-brand-black font-bold transform hover:scale-105 transition">View Project</button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white font-bold text-lg">Annual Music Festival</h3>
+                            <p class="text-brand-gold">Event Production</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item group film" data-category="film">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 aspect-video">
+                        <!-- SVG placeholder for portfolio image -->
+                        <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <rect width="100" height="100" fill="currentColor"></rect>
+                            <path d="M20,20 L80,20 L80,80 L20,80 Z" fill="#D4AF37" opacity="0.3"></path>
+                            <path d="M30,30 L70,30 L70,70 L30,70 Z" fill="#D10000" opacity="0.3"></path>
+                        </svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-brand-black/80 transition-opacity duration-300">
+                            <button class="view-project px-6 py-2 rounded-full gold-gradient text-brand-black font-bold transform hover:scale-105 transition">View Project</button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white font-bold text-lg">Urban Stories</h3>
+                            <p class="text-brand-gold">Short Film Series</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item group digital" data-category="digital">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 aspect-video">
+                        <!-- SVG placeholder for portfolio image -->
+                        <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <rect width="100" height="100" fill="currentColor"></rect>
+                            <circle cx="30" cy="30" r="15" fill="#D4AF37" opacity="0.4"></circle>
+                            <circle cx="70" cy="70" r="15" fill="#D10000" opacity="0.4"></circle>
+                            <path d="M20,50 L80,50" stroke="white" stroke-width="1" opacity="0.3"></path>
+                        </svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-brand-black/80 transition-opacity duration-300">
+                            <button class="view-project px-6 py-2 rounded-full gold-gradient text-brand-black font-bold transform hover:scale-105 transition">View Project</button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white font-bold text-lg">Brand Revival Campaign</h3>
+                            <p class="text-brand-gold">Digital Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item group web" data-category="web">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 aspect-video">
+                        <!-- SVG placeholder for portfolio image -->
+                        <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <rect width="100" height="100" fill="currentColor"></rect>
+                            <rect x="20" y="20" width="60" height="60" fill="#D4AF37" opacity="0.2"></rect>
+                            <rect x="30" y="30" width="40" height="40" fill="#D10000" opacity="0.2"></rect>
+                            <rect x="40" y="40" width="20" height="20" fill="white" opacity="0.2"></rect>
+                        </svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-brand-black/80 transition-opacity duration-300">
+                            <button class="view-project px-6 py-2 rounded-full gold-gradient text-brand-black font-bold transform hover:scale-105 transition">View Project</button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white font-bold text-lg">Luxury Brand Portal</h3>
+                            <p class="text-brand-gold">Website Development</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item group events" data-category="events">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 aspect-video">
+                        <!-- SVG placeholder for portfolio image -->
+                        <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <rect width="100" height="100" fill="currentColor"></rect>
+                            <polygon points="50,20 80,50 50,80 20,50" fill="#D4AF37" opacity="0.3"></polygon>
+                            <circle cx="50" cy="50" r="15" fill="#D10000" opacity="0.3"></circle>
+                        </svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-brand-black/80 transition-opacity duration-300">
+                            <button class="view-project px-6 py-2 rounded-full gold-gradient text-brand-black font-bold transform hover:scale-105 transition">View Project</button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white font-bold text-lg">Corporate Gala</h3>
+                            <p class="text-brand-gold">Event Production</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item group film" data-category="film">
+                    <div class="relative overflow-hidden rounded-lg bg-gray-800 aspect-video">
+                        <!-- SVG placeholder for portfolio image -->
+                        <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <rect width="100" height="100" fill="currentColor"></rect>
+                            <path d="M10,40 L90,40 L90,60 L10,60 Z" fill="#D10000" opacity="0.3"></path>
+                            <path d="M40,10 L60,10 L60,90 L40,90 Z" fill="#D4AF37" opacity="0.3"></path>
+                        </svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-brand-black/80 transition-opacity duration-300">
+                            <button class="view-project px-6 py-2 rounded-full gold-gradient text-brand-black font-bold transform hover:scale-105 transition">View Project</button>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-4">
+                            <h3 class="text-white font-bold text-lg">Music Video Production</h3>
+                            <p class="text-brand-gold">Videography</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button id="load-more" class="px-8 py-3 border-2 border-brand-gold text-brand-gold rounded-full hover:bg-brand-gold/10 transition">
+                    Load More Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-brand-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client <span class="text-brand-gold">Testimonials</span></h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    Hear what our clients have to say about their experience working with Frank J. Williams Entertainment Group.
+                </p>
+            </div>
+            
+            <div class="testimonial-slider relative">
+                <div class="overflow-hidden">
+                    <div class="testimonial-track flex transition-transform duration-500" id="testimonial-track">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide w-full lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-gradient-to-br from-gray-900 to-brand-black p-8 rounded-lg border border-brand-gold/20 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-brand-gold">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 italic mb-6">
+                                    "Frank J. Williams Entertainment Group transformed our corporate event into an unforgettable experience. Their attention to detail and creative vision exceeded our expectations."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3">
+                                        <span class="text-brand-gold font-bold">JD</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">Jane Doe</h4>
+                                        <p class="text-sm text-gray-400">Marketing Director, XYZ Corp</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide w-full lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-gradient-to-br from-gray-900 to-brand-black p-8 rounded-lg border border-brand-gold/20 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-brand-gold">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 italic mb-6">
+                                    "Working with FJW on our music video production was a game-changer. Their team's creativity and technical expertise delivered a final product that perfectly captured our artistic vision."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3">
+                                        <span class="text-brand-gold font-bold">MS</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">Michael Smith</h4>
+                                        <p class="text-sm text-gray-400">Independent Artist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide w-full lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-gradient-to-br from-gray-900 to-brand-black p-8 rounded-lg border border-brand-gold/20 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-brand-gold">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 italic mb-6">
+                                    "The website development team at Frank J. Williams Entertainment Group created a stunning online presence for our brand. The site is not only beautiful but also highly functional and user-friendly."
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3">
+                                        <span class="text-brand-gold font-bold">AJ</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">Amanda Johnson</h4>
+                                        <p class="text-sm text-gray-400">CEO, Boutique Fashion</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-slide w-full lg:w-1/3 flex-shrink-0 px-4">
+                            <div class="bg-gradient-to-br from-gray-900 to-brand-black p-8 rounded-lg border border-brand-gold/20 h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-brand-gold">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 italic mb-6">
+                                    "Their digital media team revolutionized our social media presence. We've seen a 300% increase in engagement since working with them. Highly recommended!"
+                                </p>
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-full bg-brand-gold/20 flex items-center justify-center mr-3">
+                                        <span class="text-brand-gold font-bold">RL</span>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">Robert Lee</h4>
+                                        <p class="text-sm text-gray-400">Social Media Manager, Tech Startup</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="prev-testimonial" class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-12 h-12 rounded-full bg-brand-black border border-brand-gold text-brand-gold flex items-center justify-center focus:outline-none hover:bg-brand-gold hover:text-brand-black transition z-10">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <button id="next-testimonial" class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-12 h-12 rounded-full bg-brand-black border border-brand-gold text-brand-gold flex items-center justify-center focus:outline-none hover:bg-brand-gold hover:text-brand-black transition z-10">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="flex justify-center mt-8 gap-2" id="testimonial-dots">
+                    <button class="w-3 h-3 rounded-full bg-brand-gold" data-index="0"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-600" data-index="1"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-600" data-index="2"></button>
+                    <button class="w-3 h-3 rounded-full bg-gray-600" data-index="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-b from-brand-black to-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get in <span class="text-brand-gold">Touch</span></h2>
+                <div class="w-24 h-1 bg-brand-red mx-auto"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    Ready to bring your vision to life? Contact us today to discuss how we can help you achieve your entertainment and media goals.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-brand-gold mb-2">Name</label>
+                                <input type="text" id="name" name="name" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-brand-gold mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-brand-gold mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-brand-gold mb-2">Service Interested In</label>
+                            <select id="service" name="service" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition">
+                                <option value="">Select a service</option>
+                                <option value="event-production">Event Production</option>
+                                <option value="artist-management">Artist Management</option>
+                                <option value="film-production">Film Production</option>
+                                <option value="digital-media">Digital Media Services</option>
+                                <option value="website-development">Website Development</option>
+                                <option value="videography">Videography</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-brand-gold mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="gold-gradient text-brand-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition transform hover:scale-105 w-full md:w-auto">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div>
+                    <div class="bg-gradient-to-br from-gray-900 to-brand-black p-8 rounded-lg border border-brand-gold/20 h-full">
+                        <h3 class="text-2xl font-bold mb-6 text-brand-gold">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-brand-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Address</h4>
+                                    <p class="text-gray-300">123 Entertainment Blvd, Suite 500<br>Los Angeles, CA 90028</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-phone text-brand-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Phone</h4>
+                                    <p class="text-gray-300">(310) 555-1234</p>
+                                    <p class="text-gray-300">(800) 555-5678 (Toll Free)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-envelope text-brand-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Email</h4>
+                                    <p class="text-gray-300">info@fjwentertainment.com</p>
+                                    <p class="text-gray-300">bookings@fjwentertainment.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mr-4 flex-shrink-0">
+                                    <i class="fas fa-clock text-brand-black"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Business Hours</h4>
+                                    <p class="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                    <p class="text-gray-300">Saturday: By appointment only</p>
+                                    <p class="text-gray-300">Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-white mb-4">Connect With Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center hover:bg-brand-gold hover:text-brand-black transition">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black py-12 border-t border-brand-gold/20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <span class="text-brand-gold font-bold text-2xl">FJW</span>
+                        <span class="ml-2 text-white text-lg">Entertainment Group</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Elevating entertainment through exceptional production, management, and digital media services.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-brand-gold transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-brand-gold transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-brand-gold transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-brand-gold transition">About Us</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-brand-gold transition">Portfolio</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-brand-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition">Event Production</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition">Artist Management</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition">Film Production</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition">Digital Media Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition">Website Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-brand-gold transition">Videography</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter for the latest updates and offers.
+                    </p>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="email" placeholder="Your email address" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-brand-gold transition">
+                        </div>
+                        <button type="submit" class="gold-gradient text-brand-black font-bold py-2 px-4 rounded-lg hover:opacity-90 transition w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 Frank J. Williams Entertainment Group, LLC. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-brand-gold transition text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-gold transition text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-brand-gold transition text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black opacity-80" id="modal-overlay"></div>
+        <div class="bg-brand-black border border-brand-gold/30 rounded-lg w-full max-w-4xl max-h-[90vh] overflow-y-auto relative z-10 p-6">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            
+            <div class="modal-content">
+                <h2 class="text-2xl font-bold text-brand-gold mb-4">Project Title</h2>
+                <div class="bg-gray-800 rounded-lg overflow-hidden mb-6 aspect-video">
+                    <!-- Project Image Placeholder -->
+                    <svg class="w-full h-full text-gray-700" viewBox="0 0 100 100" preserveAspectRatio="none">
+                        <rect width="100" height="100" fill="currentColor"></rect>
+                        <circle cx="50" cy="50" r="30" fill="#D4AF37" opacity="0.3"></circle>
+                        <rect x="20" y="20" width="60" height="60" stroke="#D10000" stroke-width="2" fill="none" opacity="0.3"></rect>
+                    </svg>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="text-brand-gold font-bold mb-2">Client</h3>
+                        <p class="text-gray-300">Client Name</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="text-brand-gold font-bold mb-2">Category</h3>
+                        <p class="text-gray-300">Project Category</p>
+                    </div>
+                    <div class="bg-gray-900 p-4 rounded-lg">
+                        <h3 class="text-brand-gold font-bold mb-2">Date</h3>
+                        <p class="text-gray-300">Project Date</p>
+                    </div>
+                </div>
+                
+                <h3 class="text-xl font-bold text-white mb-3">Project Overview</h3>
+                <p class="text-gray-300 mb-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.
+                </p>
+                
+                <h3 class="text-xl font-bold text-white mb-3">Challenge & Solution</h3>
+                <p class="text-gray-300 mb-6">
+                    Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.
+                </p>
+                
+                <h3 class="text-xl font-bold text-white mb-3">Results</h3>
+                <p class="text-gray-300 mb-6">
+                    Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+                </p>
+                
+                <div class="flex justify-center mt-8">
+                    <a href="#contact" class="gold-gradient text-brand-black font-bold py-3 px-8 rounded-full hover:opacity-90 transition transform hover:scale-105" id="contact-about-project">
+                        Discuss a Similar Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full gold-gradient flex items-center justify-center text-brand-black shadow-lg transform hover:scale-110 transition opacity-0 pointer-events-none">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Portfolio Filtering
+        const portfolioFilters = document.querySelectorAll('.portfolio-filter');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        portfolioFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                // Update active filter
+                portfolioFilters.forEach(f => f.classList.remove('active', 'border-brand-gold', 'text-brand-gold'));
+                portfolioFilters.forEach(f => f.classList.add('border-gray-600', 'text-gray-300'));
+                filter.classList.add('active', 'border-brand-gold', 'text-brand-gold');
+                filter.classList.remove('border-gray-600', 'text-gray-300');
+                
+                const filterValue = filter.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Testimonial Slider
+        const testimonialTrack = document.getElementById('testimonial-track');
+        const testimonialDots = document.getElementById('testimonial-dots').children;
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.testimonial-slide').length;
+        
+        function updateSlider() {
+            const slideWidth = document.querySelector('.testimonial-slide').offsetWidth;
+            testimonialTrack.style.transform = translateX(-${currentSlide * slideWidth}px);
+            
+            // Update dots
+            Array.from(testimonialDots).forEach((dot, index) => {
+                dot.classList.remove('bg-brand-gold');
+                dot.classList.add('bg-gray-600');
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-gray-600');
+                    dot.classList.add('bg-brand-gold');
+                }
+            });
+        }
+        
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+        
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        });
+        
+        // Dot navigation
+        Array.from(testimonialDots).forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateSlider();
+            });
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 5000);
+        
+        // Project Modal
+        const projectModal = document.getElementById('project-modal');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const closeModal = document.getElementById('close-modal');
+        const viewProjectButtons = document.querySelectorAll('.view-project');
+        const contactAboutProject = document.getElementById('contact-about-project');
+        
+        viewProjectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                projectModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        function closeProjectModal() {
+            projectModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        closeModal.addEventListener('click', closeProjectModal);
+        modalOverlay.addEventListener('click', closeProjectModal);
+        
+        contactAboutProject.addEventListener('click', () => {
+            closeProjectModal();
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'pointer-events-none');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form Submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to a server
+            // For this demo, we'll just show a success message
+            
+            const formData = new FormData(contactForm);
+            const formValues = Object.fromEntries(formData.entries());
+            
+            // Simple validation
+            let isValid = true;
+            const requiredFields = ['name', 'email', 'message'];
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!formValues[field]) {
+                    input.classList.add('border-red-500');
+                    isValid = false;
+                } else {
+                    input.classList.remove('border-red-500');
+                }
+            });
+            
+            if (isValid) {
+                // Show success message (in a real app, you'd send data to server)
+                contactForm.innerHTML = 
+                    <div class="bg-green-900/30 border border-green-500 text-green-300 rounded-lg p-6 text-center">
+                        <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-check text-green-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Message Sent Successfully!</h3>
+                        <p>Thank you for contacting Frank J. Williams Entertainment Group. We'll get back to you shortly.</p>
+                    </div>
+                ;
+            }
+        });
+        
+        // Load More Projects Button
+        const loadMoreButton = document.getElementById('load-more');
+        
+        loadMoreButton.addEventListener('click', () => {
+            // In a real implementation, this would load more projects from a server
+            // For this demo, we'll just show a message
+            
+            loadMoreButton.innerHTML = 'No More Projects to Load';
+            loadMoreButton.disabled = true;
+            loadMoreButton.classList.add('opacity-50', 'cursor-not-allowed');
+        });
+        
+        // Initialize the page
+        window.addEventListener('load', () => {
+            // Fix for mobile menu on resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            
+            // Initialize testimonial slider
+            updateSlider();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'939b9c5eb29d53cc',t:'MTc0NjIzMTgxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
